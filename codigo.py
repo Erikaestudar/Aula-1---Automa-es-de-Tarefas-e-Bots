@@ -49,7 +49,47 @@ pyautogui.press("enter")
 time.sleep(3)
 
 # Passo 3: Abrir a base de dados
+# pip install pandas openpyxl  - uso de panilhas
+import pandas as pd
 
+# pandas.read_excel(sheet_name="Vendas")  NO EXCEL
+table = pd.read_csv("produtos.csv")
 
 # Passo 4: Cadastrar um produto
+for line in table.index:
+    # codigo
+    pyautogui.click(x=865, y=394)
+    codigo = str(table.loc[line, "codigo"])
+    pyautogui.write(codigo)
+    pyautogui.press("tab")
+    # marca
+    marca = str(table.loc[line, "marca"])
+    pyautogui.write(marca)
+    pyautogui.press("tab")
+    #tipo
+    tipo = str(table.loc[line, "tipo"])
+    pyautogui.write(tipo)
+    pyautogui.press("tab")
+    #categoria
+    categoria = str(table.loc[line, "categoria"])
+    pyautogui.write(categoria)
+    pyautogui.press("tab")
+    #preco
+    preco = str(table.loc[line, "preco_unitario"])
+    pyautogui.write(preco)
+    pyautogui.press("tab")
+    #custo
+    custo = str(table.loc[line, "custo"])
+    pyautogui.write(custo)
+    pyautogui.press("tab")
+    #obs
+    obs = str(table.loc[line, "obs"])
+    if obs != "nan":
+        pyautogui.write(obs)
+    pyautogui.press("tab")         
+
+    pyautogui.press("enter")
+    # Voltar para o inicio da tela
+    pyautogui.scroll(5000)                       
+
 # Passo 5: Repetir o passo 4 até acabar a lista de produtos
