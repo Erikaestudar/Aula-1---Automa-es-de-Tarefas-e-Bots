@@ -6,6 +6,7 @@ import pyautogui
 import time
 import pyperclip
 
+
 # COMANDOS - Cheat Sheet
 # pyautogui.click -> clica
 # pyautogui.write -> escreve um texto
@@ -34,6 +35,21 @@ time.sleep(3)
 
 
 # Passo 2: Fazer login
+# Clicar no campo de email
+login = "pythonimpressionador@gmail.com"
+pyperclip.copy(login)
+time.sleep(1)
+pyautogui.click(x=960, y=540) # coordenadas do campo de email
+
+pyautogui.hotkey("ctrl", "v")
+pyautogui.press("tab")
+pyautogui.write("123456")
+pyautogui.press("tab")
+pyautogui.press("enter")
+time.sleep(3)
+
 # Passo 3: Abrir a base de dados
+
+
 # Passo 4: Cadastrar um produto
 # Passo 5: Repetir o passo 4 até acabar a lista de produtos
