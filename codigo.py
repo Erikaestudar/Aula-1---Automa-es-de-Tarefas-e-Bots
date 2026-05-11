@@ -5,7 +5,7 @@
 import pyautogui
 import time
 import pyperclip
-
+import pandas as pd
 
 # COMANDOS - Cheat Sheet
 # pyautogui.click -> clica
@@ -50,7 +50,6 @@ time.sleep(3)
 
 # Passo 3: Abrir a base de dados
 # pip install pandas openpyxl  - uso de panilhas
-import pandas as pd
 
 # pandas.read_excel(sheet_name="Vendas")  NO EXCEL
 table = pd.read_csv("produtos.csv")
@@ -90,6 +89,6 @@ for line in table.index:
 
     pyautogui.press("enter")
     # Voltar para o inicio da tela
-    pyautogui.scroll(5000)                       
-
+    pyautogui.scroll(5000)
+    
 # Passo 5: Repetir o passo 4 até acabar a lista de produtos
