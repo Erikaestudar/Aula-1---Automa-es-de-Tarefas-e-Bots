@@ -90,5 +90,7 @@ for line in table.index:
     pyautogui.press("enter")
     # Voltar para o inicio da tela
     pyautogui.scroll(5000)
+
+    # Para parar a automação, mova o mouse para o canto superior 0,0 da tela
     
 # Passo 5: Repetir o passo 4 até acabar a lista de produtos
