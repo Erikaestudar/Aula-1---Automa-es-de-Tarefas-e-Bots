@@ -31,7 +31,7 @@ pyperclip.copy(link)
 pyautogui.hotkey("ctrl", "v")
 pyautogui.press("enter")
 # fazer uma pausa maior pro site carregar
-time.sleep(3)
+time.sleep(5)
 
 
 # Passo 2: Fazer login
