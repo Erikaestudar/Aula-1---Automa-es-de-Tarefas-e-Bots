@@ -7,10 +7,12 @@ Este guia oferece instruções passo a passo para executar o projeto de automaç
 ## Pré-requisitos
 
 ### Sistema Operacional
+
 - Windows 7 ou superior
 - Resolução de tela: 1920x1080 (recomendado)
 
 ### Software Necessário
+
 - **Python 3.8 ou superior** instalado no sistema
 - **Google Chrome** instalado e funcionando
 - **Gerenciador de pacotes pip** (incluído com Python)
@@ -97,6 +99,7 @@ CAHA000251,Hashtag,Camisa,1,25.00,11.00,Conferir estoque
 ```
 
 **Regras importantes:**
+
 - `codigo`: identificador único (texto/números)
 - `marca`: nome do fabricante (texto)
 - `tipo`: tipo de produto (texto)
@@ -131,6 +134,7 @@ python auxiliar.py
 ```
 
 O script aguardará 5 segundos. Dentro desse tempo:
+
 1. Posicione o mouse sobre o ponto desejado.
 2. Deixe o script terminar.
 3. As coordenadas (x, y) serão exibidas no terminal.
@@ -225,22 +229,24 @@ Clique duas vezes no arquivo `.bat`.
 ### Parada de Emergência
 
 Se o script sair do controle:
+
 1. **Leve o mouse para o canto superior esquerdo da tela** (posição 0,0).
 2. `pyautogui` detectará e pausará automaticamente.
 
 Ou:
+
 1. Pressione `Ctrl + C` no terminal.
 2. O script será interrompido imediatamente.
 
 ## Troubleshooting Rápido
 
-| Problema | Solução |
-|----------|---------|
-| "ModuleNotFoundError: No module named 'pyautogui'" | Execute `pip install pyautogui` |
-| Cliques acontecem no lugar errado | Recapture as coordenadas com `auxiliar.py` |
-| Site não carrega | Aumente o `time.sleep()` após abrir o navegador |
-| Campos não são preenchidos | Confirme que o campo está ativo (clicado) antes de digitar |
-| Erro de autenticação | Verifique e-mail e senha no código |
+| Problema                                           | Solução                                                    |
+| -------------------------------------------------- | ---------------------------------------------------------- |
+| "ModuleNotFoundError: No module named 'pyautogui'" | Execute `pip install pyautogui`                            |
+| Cliques acontecem no lugar errado                  | Recapture as coordenadas com `auxiliar.py`                 |
+| Site não carrega                                   | Aumente o `time.sleep()` após abrir o navegador            |
+| Campos não são preenchidos                         | Confirme que o campo está ativo (clicado) antes de digitar |
+| Erro de autenticação                               | Verifique e-mail e senha no código                         |
 
 Para problemas mais detalhados, consulte [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
 

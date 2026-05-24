@@ -13,6 +13,7 @@ codigo,marca,tipo,categoria,preco_unitario,custo,obs
 ```
 
 **Importante:**
+
 - Sem espaços extras ao redor dos nomes
 - Sem acentos
 - Maiúsculas/minúsculas como mostrado
@@ -39,12 +40,14 @@ print(df.columns.tolist())
 **Tipo:** Texto ou números (aceita ambos)
 
 **Exemplos válidos:**
+
 - `MOLO000251`
 - `123456`
 - `NOVO-001`
 - `SKU_MOUSE_001`
 
 **Exemplos inválidos:**
+
 - (deixar em branco)
 - `NULL`
 - `nan`
@@ -52,6 +55,7 @@ print(df.columns.tolist())
 **Comprimento:** Sem limite, mas recomenda-se até 50 caracteres
 
 **Como preencher:**
+
 ```csv
 codigo
 MOLO000251
@@ -66,6 +70,7 @@ BOHA000252
 **Tipo:** Texto simples
 
 **Exemplos válidos:**
+
 - `Logitech`
 - `Hashtag`
 - `Samsung`
@@ -74,12 +79,14 @@ BOHA000252
 - `Apple`
 
 **Exemplos inválidos:**
+
 - (deixar em branco)
 - `123` (números puros não recomendados)
 
 **Comprimento:** Até 100 caracteres recomendado
 
 **Como preencher:**
+
 ```csv
 marca
 Logitech
@@ -94,6 +101,7 @@ Samsung
 **Tipo:** Texto simples
 
 **Exemplos válidos:**
+
 - `Mouse`
 - `Camisa`
 - `Televisao`
@@ -104,6 +112,7 @@ Samsung
 **Comprimento:** Até 50 caracteres recomendado
 
 **Como preencher:**
+
 ```csv
 tipo
 Mouse
@@ -118,12 +127,14 @@ Televisao
 **Tipo:** Número (1, 2, 3...) ou Texto
 
 **Exemplos válidos (numéricos):**
+
 - `1`
 - `2`
 - `3`
 - `5`
 
 **Exemplos válidos (textuais):**
+
 - `Preto`
 - `Branco`
 - `Grande`
@@ -132,6 +143,7 @@ Televisao
 **Recomendação:** Use números para melhor compatibilidade
 
 **Como preencher (numéricos):**
+
 ```csv
 categoria
 1
@@ -141,6 +153,7 @@ categoria
 ```
 
 **Como preencher (textuais):**
+
 ```csv
 categoria
 Preto
@@ -157,12 +170,14 @@ Grande
 **Formato:** Use **PONTO** como separador decimal (não vírgula)
 
 **Exemplos válidos:**
+
 - `25.95`
 - `100.00`
 - `19.99`
 - `1250.50`
 
 **Exemplos inválidos:**
+
 - `25,95` (vírgula - será interpretado como separador CSV)
 - `25` (falta casas decimais, mas funciona)
 - `R$ 25.95` (caracteres não numéricos)
@@ -170,6 +185,7 @@ Grande
 **Faixa recomendada:** 0.01 até 999999.99
 
 **Como preencher:**
+
 ```csv
 preco_unitario
 25.95
@@ -187,18 +203,21 @@ preco_unitario
 **Formato:** Use **PONTO** como separador decimal
 
 **Exemplos válidos:**
+
 - `6.50`
 - `5.00`
 - `172.20`
 - `3000.00`
 
 **Exemplos inválidos:**
+
 - `6,50` (vírgula)
 - Deixar em branco (se usado no cálculo de margem)
 
 **Recomendação:** Sempre menor ou igual ao `preco_unitario`
 
 **Como preencher:**
+
 ```csv
 custo
 6.50
@@ -214,6 +233,7 @@ custo
 **Tipo:** Texto simples ou vazio
 
 **Exemplos válidos:**
+
 - (deixar vazio)
 - `Conferir estoque`
 - `Troca de fornecedor`
@@ -221,11 +241,13 @@ custo
 - `Necessita calibragem`
 
 **Exemplos inválidos:**
+
 - Nenhum (pode estar vazio)
 
 **Limite:** Até 500 caracteres recomendado
 
 **Como preencher:**
+
 ```csv
 obs
 (deixar vazio)
@@ -347,6 +369,7 @@ print(df.head(3))
 **Causa:** Nome da coluna está incorreto ou espaços extras
 
 **Solução:**
+
 ```python
 # Verificar nomes exatos
 df = pd.read_csv('produtos.csv')
@@ -358,6 +381,7 @@ print(df.columns.tolist())
 **Causa:** Arquivo salvo em região que usa vírgula
 
 **Solução:**
+
 ```python
 # Substituir vírgula por ponto
 df = pd.read_csv('produtos.csv')
@@ -371,6 +395,7 @@ df.to_csv('produtos.csv', index=False)
 **Causa:** Espaços extras ou encoding incorreto
 
 **Solução:**
+
 ```python
 # Limpar espaços e ler com encoding correto
 df = pd.read_csv('produtos.csv', encoding='utf-8-sig', skipinitialspace=True)
@@ -423,12 +448,14 @@ conn.close()
 ## Dicas de Melhor Prática
 
 ✅ **Faça:**
+
 - Use pontos para decimais (25.95)
 - Nomes de colunas exatamente como especificado
 - Verifique se há duplicatas de código
 - Mantenha backup do original
 
 ❌ **Evite:**
+
 - Vírgulas em valores numéricos (25,95)
 - Espaços extras ao redor dos dados
 - Usar caracteres especiais em `codigo`

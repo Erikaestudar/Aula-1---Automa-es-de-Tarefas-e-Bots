@@ -7,11 +7,13 @@ Guia para diagnosticar e resolver problemas comuns ao executar a automação.
 ### "python: comando não encontrado" ou "python is not recognized"
 
 **Diagnóstico:**
+
 ```bash
 python --version
 ```
 
 **Solução:**
+
 1. Reinstale Python em https://www.python.org
 2. Durante a instalação, **MARQUE** a opção "Add Python to PATH"
 3. Reinicie o computador
@@ -63,6 +65,7 @@ pip install pillow
 ### O Script Não Inicia
 
 **Verificar:**
+
 1. O arquivo `codigo.py` existe?
 2. Está no diretório correto?
 3. A sintaxe Python está correta?
@@ -80,6 +83,7 @@ Se não houver erro, o arquivo está válido.
 **Causa:** Chrome não está instalado ou não está no PATH.
 
 **Verificar:**
+
 ```bash
 where chrome
 ```
@@ -248,12 +252,15 @@ Se isso não funcionar, feche a janela do terminal ou use Task Manager.
 ### "Preciso parar o script meio da execução"
 
 **Opção 1:** Parada de Emergência (mouse para 0,0)
+
 - Leve o mouse para o **canto superior esquerdo** da tela
 
 **Opção 2:** Terminal
+
 - Pressione `Ctrl + C` na janela do terminal
 
 **Opção 3:** Força Bruta
+
 - Abra Task Manager (Ctrl + Shift + Esc)
 - Procure por "Python"
 - Clique em "End Task"

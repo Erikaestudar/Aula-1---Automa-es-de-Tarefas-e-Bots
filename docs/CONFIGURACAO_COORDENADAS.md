@@ -3,10 +3,12 @@
 ## O Que São Coordenadas?
 
 As coordenadas (x, y) representam a posição de um ponto na tela:
+
 - **x**: distância em pixels da borda esquerda
 - **y**: distância em pixels da borda superior
 
 Por exemplo:
+
 - (0, 0) = canto superior esquerdo
 - (960, 540) = centro da tela (em resolução 1920x1080)
 - (1920, 1080) = canto inferior direito (em resolução 1920x1080)
@@ -96,7 +98,7 @@ try:
             x, y = mouse.get_position()
             print(f"Coordenadas capturadas: ({x}, {y})")
             time.sleep(0.5)
-        
+
         if mouse.is_pressed('esc'):
             break
 except KeyboardInterrupt:
@@ -193,18 +195,21 @@ pyautogui.press("enter")
 
 **Causa:** Zoom do navegador alterado
 
-**Solução:** 
+**Solução:**
+
 1. Pressione `Ctrl + 0` no navegador para resetar o zoom a 100%
 2. Recapture as coordenadas
 
 ### Problema: Script Clica no Lugar Errado
 
-**Causa:** 
+**Causa:**
+
 - Resolução da tela mudou
 - Janela do navegador foi movida
 - Zoom alterado
 
 **Solução:**
+
 1. Maximize a janela do navegador
 2. Confirme a resolução em Configurações > Exibição
 3. Recapture as coordenadas
@@ -214,6 +219,7 @@ pyautogui.press("enter")
 **Causa:** Você pode estar em um monitor secundário ou ter múltiplos monitores
 
 **Solução:**
+
 1. Execute a automação no monitor principal
 2. Ou adapte o código para detectar o monitor
 

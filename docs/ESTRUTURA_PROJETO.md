@@ -151,15 +151,15 @@ CAHA000251,Hashtag,Camisa,1,25.00,11.00,Conferir estoque
 
 **Colunas:**
 
-| Coluna | Tipo | Exemplo | Obrigatória |
-|--------|------|---------|-------------|
-| `codigo` | String | MOLO000251 | Sim |
-| `marca` | String | Logitech | Sim |
-| `tipo` | String | Mouse | Sim |
-| `categoria` | String/Int | 1 | Sim |
-| `preco_unitario` | Float | 25.95 | Sim |
-| `custo` | Float | 6.50 | Sim |
-| `obs` | String | Conferir estoque | Não (pode estar vazio) |
+| Coluna           | Tipo       | Exemplo          | Obrigatória            |
+| ---------------- | ---------- | ---------------- | ---------------------- |
+| `codigo`         | String     | MOLO000251       | Sim                    |
+| `marca`          | String     | Logitech         | Sim                    |
+| `tipo`           | String     | Mouse            | Sim                    |
+| `categoria`      | String/Int | 1                | Sim                    |
+| `preco_unitario` | Float      | 25.95            | Sim                    |
+| `custo`          | Float      | 6.50             | Sim                    |
+| `obs`            | String     | Conferir estoque | Não (pode estar vazio) |
 
 **Como Adicionar Produtos:**
 
@@ -218,6 +218,7 @@ pyautogui.PAUSE = 0.5  # 500ms entre ações
 **Propósito:** Dar tempo ao sistema de processar cada ação.
 
 **Ajustes:**
+
 - `0.3`: Muito rápido (pode falhar)
 - `0.5`: Padrão (equilibrado)
 - `1.0`: Lento (mais confiável, mas demora mais)
@@ -256,10 +257,12 @@ login = "pythonimpressionador@gmail.com"
 ## Dependências do Projeto
 
 ### Python
+
 - Versão: 3.8+
 - Download: https://www.python.org
 
 ### Bibliotecas
+
 - **pyautogui**: Controla mouse e teclado
 - **pyperclip**: Acessa área de transferência
 - **pandas**: Manipula arquivos CSV
@@ -271,6 +274,7 @@ pip install pyautogui pyperclip pandas pillow
 ```
 
 ### Sistema Operacional
+
 - Windows 7 ou superior
 - Screen resolution: 1920x1080 (recomendado)
 

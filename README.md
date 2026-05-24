@@ -1,5 +1,7 @@
 # Automação de Cadastro de Produtos
 
+Versão em inglês: [README_en.md](README_en.md)
+
 Este projeto automatiza o cadastro de produtos em um sistema web usando Python e a biblioteca `pyautogui`.
 
 ## Visão Geral
