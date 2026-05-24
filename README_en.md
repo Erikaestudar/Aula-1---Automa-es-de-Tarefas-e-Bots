@@ -69,7 +69,7 @@ python codigo.py
 
 - Replace fixed coordinates with image recognition or UI element detection.
 - Implement exception handling to detect page loading failures.
-- v
+- Make the username and password configurable through environment variables or external configuration files.
 - Support additional data formats such as Excel (`.xlsx`).
 
 ## References
